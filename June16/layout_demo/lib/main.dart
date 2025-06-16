@@ -106,7 +106,8 @@ class _MyHomePageState extends State<MyHomePage> {
 class LayoutScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
       title: const Text('Column Layout Example'),
     ),
     body: Column(
@@ -129,11 +130,12 @@ class LayoutScreen extends StatelessWidget{
           child: const Center(
             child: Text(
               'Bottom Container',
-              style: TextStyle(color:Colors.white,fonstSize:20),
+              style: TextStyle(color:Colors.white,fontSize:20),
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
