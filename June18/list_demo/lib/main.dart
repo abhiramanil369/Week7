@@ -30,15 +30,15 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         primarySwatch: Colors.green,
       ),
-      home: const FovoriteFoodsScreen(),
+      home: const FavoriteFoodsScreen(),
     );
   }
 }
 
-class FovoriteFoodsScreen extends StatelessWidget {
+class FavoriteFoodsScreen extends StatelessWidget {
   const FavoriteFoodsScreen({super.key});
 
-  final List<String> foods= const[
+  final List<String> foods= const [
     "Pizza",
     "Burger",
     "Salad",
