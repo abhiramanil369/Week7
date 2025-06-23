@@ -51,7 +51,7 @@ class ToDoListScreen extends StatefulWidget {
   // final String title;
 
   @override
-  State<ToDoListScreene> createState() => _ToDoListScreenState();
+  State<ToDoListScreen> createState() => _ToDoListScreenState();
 }
 
 class _ToDoListScreenState extends State<ToDoListScreen> {
@@ -59,10 +59,10 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
   final TextEditingController _controller = TextEditingController();
   final List<String> _tasks = [];
 
-  void addTask(){
+  void _addTask(){
     String newTask = _controller.text.trim();
-    if(newtask.isNotEmpty){
-      setState()( {
+    if(newTask.isNotEmpty){
+      setState(() {
         _tasks.add(newTask);
       });
       _controller.clear();
@@ -100,7 +100,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
         child: Column(
           children: [
             Row(
-              children [
+              children: [
                 Expanded(
                   child: TextField(
                     controller: _controller,
@@ -113,10 +113,10 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
                 const SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: _addTask,
-                  style: ElevateButton.styleFrom(
-                    backgroundColor: Colors.teal,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
                   ),
-                  child: const Text('Add');
+                  child: const Text('Add'),
                 ),
               ],
             ),
@@ -124,9 +124,9 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
             Expanded(
               child: _tasks.isEmpty
               ? const Center(
-                cchild: Text(
+                child: Text(
                   'No tasks yet!',
-                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               )
               : ListView.builder(
@@ -135,7 +135,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
                   return Card(
                     color: Colors.teal[50],
                     margin: const EdgeInsets.symmetric(vertical: 6),
-                    child: LisstTile(
+                    child: ListTile(
                       leading: const Icon(Icons.check_circle_outline),
                       title: Text(
                         _tasks[index],
